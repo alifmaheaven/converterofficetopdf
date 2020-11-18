@@ -67,9 +67,6 @@ exports.convertFilesApi = async function(req, res) {
             data.linkFile = `${environment.BASE_URL}/publicFiles/afterconvert/${req.files.files_convert[0].filename}.pdf`
             response.ok("Data has been successfully saved!",data, res)
         },
-        function(callback) {
-            
-        }
         ], function(err, result) {
             console.log(err);
             // you can add anything you want
