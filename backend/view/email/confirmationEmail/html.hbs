@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        .tooltip {
+          position: relative;
+          display: inline-block;
+        }
+        
+        .tooltip .tooltiptext {
+          visibility: hidden;
+          width: 140px;
+          background-color: #555;
+          color: #fff;
+          text-align: center;
+          border-radius: 6px;
+          padding: 5px;
+          position: absolute;
+          z-index: 1;
+          bottom: 150%;
+          left: 50%;
+          margin-left: -75px;
+          opacity: 0;
+          transition: opacity 0.3s;
+        }
+        
+        .tooltip .tooltiptext::after {
+          content: "";
+          position: absolute;
+          top: 100%;
+          left: 50%;
+          margin-left: -5px;
+          border-width: 5px;
+          border-style: solid;
+          border-color: #555 transparent transparent transparent;
+        }
+        
+        .tooltip:hover .tooltiptext {
+          visibility: visible;
+          opacity: 1;
+        }
+        button:hover {
+            background-color: yellow;
+        }
+        </style>
+</head>
+
+
+<body
+style="
+background: url('https://drive.google.com/uc?export=view&id=17DW5LskeLobV_SiJDsl3U79Shdrlm7Ta');
+background-size: cover;
+background-repeat: no-repeat;
+"
+>
+    <div 
+        style="        
+        width: 100%;
+        align-content: center;
+        text-align: center;
+        align-items: center;
+        margin: auto;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    ">
+    <div
+        style="
+        margin: 50px;
+        padding: 30px;
+        "
+    >
+        <div class="col-12">
+          <img style="height: 200px;" src="https://drive.google.com/uc?export=view&id=1ECFJt3qAOnHKfky0FAOxqWmjgSPOT16C" alt="">
+        </div>
+        <h2 style="color: black;">Hello, {{name}} </h2>
+        <h4 style="color: black;">Please Login with :</h4>
+        <span style="color: black;">Email : {{email}}</span><br>
+        <span style="color: black;">Password : {{password}}</span><br>
+        <h5 style="color: black;">Regards, Suports Dynamic</h5>
+        <br>
+        <div class="col-12">
+          {{!-- <form action="#" method="get" target="_blank"> --}}
+            <a href="{{selfUrl}}">
+             <button type="submit" style="color: white;background-color: #da251d;border: none;font-size: 20px;padding: 20px 30px; margin: 4px 2px;border-radius: 15px;">Go to Dynamic</button>
+            </a>
+          {{!-- </form> --}}
+        </div>
+    </div>    
+    </div
+    >
+        
+
+    </div>
+</body>
+</html>

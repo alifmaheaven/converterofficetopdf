@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        .tooltip {
+          position: relative;
+          display: inline-block;
+        }
+        
+        .tooltip .tooltiptext {
+          visibility: hidden;
+          width: 140px;
+          background-color: #555;
+          color: #fff;
+          text-align: center;
+          border-radius: 6px;
+          padding: 5px;
+          position: absolute;
+          z-index: 1;
+          bottom: 150%;
+          left: 50%;
+          margin-left: -75px;
+          opacity: 0;
+          transition: opacity 0.3s;
+        }
+        
+        .tooltip .tooltiptext::after {
+          content: "";
+          position: absolute;
+          top: 100%;
+          left: 50%;
+          margin-left: -5px;
+          border-width: 5px;
+          border-style: solid;
+          border-color: #555 transparent transparent transparent;
+        }
+        
+        .tooltip:hover .tooltiptext {
+          visibility: visible;
+          opacity: 1;
+        }
+        button:hover {
+            background-color: yellow;
+        }
+        </style>
+</head>
+
+
+<body
+style="background-color: rgb(177, 177, 177);"
+>
+    <div 
+        style="
+        background-color: #000000;
+        width: 80%;
+        align-content: center;
+        text-align: center;
+        align-items: center;
+        margin: auto;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    ">
+    <div
+        style="
+        margin: 50px;
+        padding: 30px;
+        "
+    >
+        <h1 style="color: white;">Confirmation Email</h1>
+        <h4 style="color: white;">Please Click the button below to confirmation your email</h4>
+        <a href="">
+            <button type="button" style="
+            background: rgb(121, 0, 0);
+            border: none;
+            color: white;
+            font-weight: bold;
+            font-size: 30px;
+            padding-left: 20px;
+            padding-right: 20px;    
+            padding-top: 5px;
+            padding-bottom: 5px;
+            cursor: pointer;
+            ">Verify Your Email</button>
+        </a>
+        <h4 style="color: white;">or copypaste this link :</h4>
+        <h5 id="linktoredirect" style="color: white;"><input type="text" value="https://www.google.com" id="myInput"
+            style="
+            background-color: black;
+            color: white;
+            border: none;
+            font-size: 18px
+            "
+            readonly> </h5>
+        <div class="tooltip">
+            <button style="
+                background: rgb(121, 0, 0);
+                border: none;
+                color: white;
+                font-weight: bold;
+                font-size: 15px;
+                padding-left: 20px;
+                padding-right: 20px;
+                padding-top: 5px;
+                padding-bottom: 5px;
+                cursor: pointer;
+            " onclick="myFunction()" onmouseout="outFunc()">
+            <span class="tooltiptext" id="myTooltip">Copy to clipboard</span>
+            Copy link
+            </button>
+        </div>
+        
+    </div
+    >
+        
+
+    </div>
+   
+    <script>
+    /* Select the text field */
+    function myFunction() {
+    var copyText = document.getElementById("myInput");
+    // document.getElementById("linktoredirect").innerHTML = "yourTextHere";
+    copyText.select();
+    copyText.setSelectionRange(0, 99999);
+    document.execCommand("copy");
+    
+    var tooltip = document.getElementById("myTooltip");
+    tooltip.innerHTML = "Link Copied"
+    }
+
+    function outFunc() {
+    var tooltip = document.getElementById("myTooltip");
+    tooltip.innerHTML = "Copy to clipboard";
+    }
+   
+    </script>
+</body>
+</html>
