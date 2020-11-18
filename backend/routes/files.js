@@ -8,7 +8,7 @@ var uploadcek = require('../config/upload')
 var upload = uploadcek.destination('public/uploads/beforeconvert')
 
 const files = require('../controllers/filesController');
-const verify = require('../middleware/verify');
+// const verify = require('../middleware/verify');
 
 /* GET users listing. */
 // router.get('/', user.users);

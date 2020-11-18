@@ -1,26 +1,10 @@
 'use strict';
 
 require('dotenv').config()
-let environment = process.env;
-
-var response = require('../../config/res');
-var { pool } = require('../../config/database');
-
-var mailConfig = require('../../config/email');
-const uuidv4 = require('uuid/v4');
-const moment = require('moment');
-var localFormat = 'YYYY-MM-DD HH:mm:ss';
 
 const fs = require('fs')
-const toPdf = require("office-to-pdf")
 const path = require('path');
 
-var SCREET_KEY = process.env.SCREET_KEY;
-var EXPIRED_TOKEN = parseInt(process.env.EXPIRED_TOKEN);
-
-// agar sepuluh baris maka kita gunakan salt dan pake async ya :)
-const bcrypt = require("bcryptjs");
-const jwt = require('jsonwebtoken');
 const async = require('async');
 
 exports.deleteFiles = async function(req, res) {
