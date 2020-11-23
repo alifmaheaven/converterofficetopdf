@@ -29,7 +29,7 @@ app.get('/api', (req, res) => {
 });
 
 //cronjob
-// require('./cronjob/cronjob');
+require('./cronjob/cronjob');
 
 app.listen(port, () => {
     console.log(`Server started on port :`+port+``);
